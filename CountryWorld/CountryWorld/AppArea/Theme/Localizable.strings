@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  CountryWorld
+
+  Created by Gabriele Moia on 19/02/23.
+  
+*/
+
+"header_title" = "World Countries";
+"searchbar_placeholder" = "Search for region or language";
+"detail_capital" = "Capital";
+"detail_currency" = "Currency";
+"detail_languages" = "Languages";
+"detail_populations" = "Populations";
+"error_title" = "Error";
+"error_close" = "Close";
