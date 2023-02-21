@@ -55,7 +55,8 @@ class HomeViewController: BaseViewController {
 
         self.searchBar.delegate = self
         self.searchBar.placeholder = String(localized: "searchbar_placeholder")
-
+        self.searchBar.returnKeyType = .done
+        
         self.countriesTableView.sectionHeaderTopPadding = 0
         self.countriesTableView.delegate = self
         self.countriesTableView.dataSource = self
@@ -83,6 +84,10 @@ extension HomeViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.viewModel.filterCountries(value: searchText.lowercased())
         self.countriesTableView.startSkeletonAnimation()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 
